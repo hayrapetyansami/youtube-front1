@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js","test.js"],"names":["console","log"],"mappings":"aAAAA,QAAAC,IAAA,SAAA,ECAAD,QAAAC,IAAA,SAAA","file":"all.js","sourcesContent":["console.log(\"main.js\");","console.log(\"test.js\");"]}
