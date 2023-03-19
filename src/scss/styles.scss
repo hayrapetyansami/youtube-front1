@@ -1,7 +1,8 @@
-@import "reset.scss";
+@import "./fonts.scss";
+@import "./global.scss";
+
+@import "./components/header.scss";
 
 body {
-	background: #dd2266;
-	color: #fff;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "r-regular", sans-serif;
 }
