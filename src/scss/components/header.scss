@@ -10,7 +10,6 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		min-height: 100px;
 
 		.nav__left {
 			img {
@@ -29,19 +28,22 @@ header {
 
 			.nav__menu {
 				display: flex;
-				gap: 32px;
 				margin: 0;
 
 				li {
 					list-style-type: none;
 
 					a {
-						display: block;
+						display: flex;
+						align-items: center;
 						text-decoration: none;
 						color: #fff;
+						min-height: 100px;
+						padding: 0px 16px;
+						transition: $trs;
 
 						&:hover {
-							text-decoration: underline;
+							background: $primary;
 						}
 					}
 				}
@@ -60,6 +62,8 @@ header {
 		}
 
 		@media screen and (max-width: $mobile) {
+			min-height: 100px;
+
 			.nav__mobile {
 				display: block;
 			}
@@ -74,7 +78,6 @@ header {
 				height: 100vh;
 				background: #fff;
 				gap: 32px;
-				padding: 30px;
 				transition: left 0.3s;
 
 				&.active__nav {
@@ -84,17 +87,37 @@ header {
 
 				.nav__menu {
 					flex-direction: column;
-					gap: 16px;
+					gap: 0px;
+					width: 100%;
+					border-bottom: 0.5px solid #eee;
+
 					li {
 						a {
+							padding: 0px 30px;
 							color: $darkText;
+
+							&:hover {
+								color: #fff;
+							}
 						}
 					}
 				}
 
 				.nav__lang {
+					padding: 0px 30px;
+
 					a {
 						color: $darkText;
+					}
+				}
+
+				.nav__btn {
+					padding: 0px 30px;
+					width: 100%;
+
+					a {
+						width: 100%;
+						text-align: center;
 					}
 				}
 			}
@@ -121,6 +144,7 @@ header {
 			color: #fff;
 			letter-spacing: 0.2px;
 		}
+
 		a {
 			width: 183px;
 			height: 42px;
