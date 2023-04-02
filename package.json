@@ -4,7 +4,7 @@
   "description": "Front end course for YouTube",
   "main": "all.js",
   "scripts": {
-    "watch": "gulp watch",
+    "start": "gulp watch",
     "build": "gulp build",
     "dev": "gulp dev"
   },

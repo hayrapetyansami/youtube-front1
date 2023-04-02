@@ -79,6 +79,7 @@ header {
 				background: #fff;
 				gap: 32px;
 				transition: left 0.3s;
+				z-index: 555;
 
 				&.active__nav {
 					transition: left 0.3s;

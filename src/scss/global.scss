@@ -14,25 +14,34 @@
 	margin: 0 auto;
 }
 
-.primaryBtn {
+.primaryBtn,
+.secondaryBtn {
 	padding: 8px 16px;
 }
 
-.primaryBtnBig {
+.primaryBtnBig,
+.secondaryBtnBig {
 	padding: 16px 48px;
+}
+
+.primaryBtn,
+.primaryBtnBig,
+.secondaryBtn,
+.secondaryBtnBig {
+	width: fit-content;
+	text-decoration: none;
+	font-size: 15px;
+	letter-spacing: 0.2px;
+	border-radius: $br;
+	transition: $trs;
+	cursor: pointer;
 }
 
 .primaryBtn,
 .primaryBtnBig {
 	display: block;
-	text-decoration: none;
 	background: $primary;
-	font-size: 15px;
 	color: #fff;
-	letter-spacing: 0.2px;
-	width: fit-content;
-	border-radius: $br;
-	transition: $trs;
 
 	&:hover {
 		background: $primaryHover;
@@ -40,28 +49,14 @@
 	}
 }
 
-.secondaryBtn {
-	padding: 8px 16px;
-}
-
-.secondaryBtnBig {
-	padding: 16px 48px;
-}
-
 .secondaryBtn,
 .secondaryBtnBig {
 	display: flex;
 	align-items: center;
 	gap: 4px;
-	text-decoration: none;
 	background: transparent;
 	border: 1px solid $darkText;
 	color: $darkText;
-	font-size: 15px;
-	cursor: pointer;
-	width: fit-content;
-	border-radius: $br;
-	transition: $trs;
 
 	&:hover {
 		background: $darkText;
@@ -69,6 +64,9 @@
 		color: #fff;
 
 		svg {
+			transition: transform $trs;
+			transform: translateX(10px);
+
 			path {
 				fill: #fff;
 			}
@@ -89,15 +87,16 @@
 	font-weight: 400;
 	font-size: min(67px, max(33.5px + 2vw));
 
-	@media screen and (max-width: $mobile) {
-		margin: 0px 0px 48px 0px !important;
+	@media screen and (max-width: $tabletM) {
+		margin: 0px 0px 24px 0px !important;
 		text-align: center;
 	}
 }
 
 .subtitle {
-	@media screen and (max-width: $mobile) {
+	@media screen and (max-width: $tabletM) {
 		text-align: center;
+		margin: 0px 0px 24px 0px !important;
 	}
 }
 
